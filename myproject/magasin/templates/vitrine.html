@@ -1,0 +1,37 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+
+<style>
+
+</style>
+<body>
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+	<div class="row">
+		{% for product in list %}
+		<div class="col-lg-4">
+			<img src='{{ MEDIA_URL }}{{ product.img }}' class="rounded float-start "height="100px" width="100px" alt="">
+			<div class="box-element product">
+				<h6><strong>{{product.libelle}}</strong></h6>
+				<hr>
+
+				<a  class="btn btn-outline-secondary add-btn " href="#">Add to Cart</a>
+				<a class="btn btn-outline-success" href="{% url 'details' product.id  %}">View</a>
+				<h4 style="display: inline-block; float: right"><strong> Price:  {{product.prix}} dt</strong></h4>
+
+			</div>
+		</div>
+		{% endfor %}
+         </div>
+
+{% endblock content %}
+
+</body>
+</html>

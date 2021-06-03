@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>accueil</title>
+    <link rel="stylesheet" href="{%static 'home.css'%}">
+</head>
+<body>
+<div id="conteneur">
+<h1 id="header"><a href="#" title="Premier Site Django"><span>Site Django</span></a></h1>
+<nav>
+<ul id="menu">
+<li><a href="/magasin/"> <img src="{% static 'images/logo.jpg' %}" height="100" width="100"/></a></li>
+<li><a href="#">Application n°2</a></li>
+<li><a href="#">Application n°3</a></li>
+</ul>
+</nav>
+<div id="contenu">
+   <h2>ceci est un espace pour des application Django</h2>
+<p>Mahdi Kachouri DSI 22 </p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+	<div class="col-md-5">
+		<h5>CUSTOMERS:</h5>
+		<hr>
+		<div class="card card-body">
+
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Client</th>
+					<th>Email</th>
+				</tr>
+
+				{% for customer in clients %}
+					<tr>
+						<td></td>
+						<td> {{request.user.nom}}</td>
+						<td>{{cu.user.email}}</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+
+		<hr>
+		<div class="card card-body">
+
+			<table class="table table-sm">
+				<tr>
+					<th>Product</th>
+					<th>Date Added</th>
+					<th>Quantity</th>
+
+				</tr>
+
+				{% for order in orders %}
+					<tr>
+						<td>{{order.produit}}</td>
+						<td>{{order.date_added}}</td>
+						<td>{{order.quantity}}</td>
+
+
+					</tr>
+				{% endfor %}
+
+
+			</table>
+		</div>
+	</div>
+
+</div>
+{% endblock %}
+</body>
+</html>

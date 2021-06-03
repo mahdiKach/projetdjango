@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+ <img src='{{ MEDIA_URL }}{{ products.img }}'
+class="rounded float-start "height="200px" width="200px" alt="">
+<br/>
+
+<strong> product name : </strong> {{products.name}} <br/>
+<strong>description :</strong> {{products.description}}<br/>
+<strong> Price :</strong> {{products.prix}} <br/>
+
+<button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+<br>
+<br>
+
+{% endblock %}
+</body>
+</html>
